@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - RV Car Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F97316',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-black py-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-primary">RV Car Care</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="/" class="text-white hover:text-primary">Home</a>
+                <a href="/services.html" class="text-white hover:text-primary">Services</a>
+                <a href="/portfolio.html" class="text-white hover:text-primary">Portfolio</a>
+                <a href="/about.html" class="text-white hover:text-primary">About</a>
+                <a href="/contact.html" class="text-white hover:text-primary">Contact</a>
+            </div>
+            <button class="md:hidden text-white" onclick="toggleMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black absolute w-full">
+            <div class="container mx-auto px-4 py-2 space-y-2">
+                <a href="/" class="block text-white hover:text-primary">Home</a>
+                <a href="/services.html" class="block text-white hover:text-primary">Services</a>
+                <a href="/portfolio.html" class="block text-white hover:text-primary">Portfolio</a>
+                <a href="/about.html" class="block text-white hover:text-primary">About</a>
+                <a href="/contact.html" class="block text-white hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Header -->
+    <section class="pt-24 pb-12 bg-black text-white">
+        <div class="container mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Our Services</h1>
+            <p class="text-xl mb-8">Comprehensive car care solutions for your vehicle</p>
+        </div>
+    </section>
+
+    <!-- Detailed Services Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Car Washing -->
+                <div class="p-8 border border-gray-200 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">🚿</div>
+                    <h3 class="text-2xl font-semibold mb-4">Car Washing</h3>
+                    <p class="text-gray-600 mb-4">Professional exterior and interior cleaning service using premium products. Includes hand wash, wax application, and interior vacuuming for that showroom shine.</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Exterior hand wash</li>
+                        <li>Premium wax application</li>
+                        <li>Interior vacuuming</li>
+                        <li>Window cleaning</li>
+                    </ul>
+                </div>
+
+                <!-- Engine Detailing -->
+                <div class="p-8 border border-gray-200 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">🔧</div>
+                    <h3 class="text-2xl font-semibold mb-4">Engine Detailing</h3>
+                    <p class="text-gray-600 mb-4">Thorough cleaning and degreasing of your engine bay. Improves engine appearance and helps identify potential issues early.</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Engine bay degreasing</li>
+                        <li>Protective coating application</li>
+                        <li>Visual inspection</li>
+                        <li>Component cleaning</li>
+                    </ul>
+                </div>
+
+                <!-- Oil Change -->
+                <div class="p-8 border border-gray-200 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">🛢️</div>
+                    <h3 class="text-2xl font-semibold mb-4">Oil Change</h3>
+                    <p class="text-gray-600 mb-4">Regular oil changes using high-quality synthetic oils. Essential maintenance for engine longevity and performance.</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Synthetic oil replacement</li>
+                        <li>Filter replacement</li>
+                        <li>Multi-point inspection</li>
+                        <li>Fluid level check</li>
+                    </ul>
+                </div>
+
+                <!-- AC Servicing -->
+                <div class="p-8 border border-gray-200 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">❄️</div>
+                    <h3 class="text-2xl font-semibold mb-4">AC Servicing</h3>
+                    <p class="text-gray-600 mb-4">Complete air conditioning system maintenance and repair. Ensures optimal cooling performance and air quality.</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Gas refill/top-up</li>
+                        <li>Filter cleaning</li>
+                        <li>Performance check</li>
+                        <li>Sanitization service</li>
+                    </ul>
+                </div>
+
+                <!-- Wheel Alignment -->
+                <div class="p-8 border border-gray-200 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">⚙️</div>
+                    <h3 class="text-2xl font-semibold mb-4">Wheel Alignment</h3>
+                    <p class="text-gray-600 mb-4">Precise wheel alignment service using advanced equipment. Improves handling and reduces tire wear.</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>4-wheel alignment</li>
+                        <li>Tire rotation</li>
+                        <li>Balancing service</li>
+                        <li>Suspension check</li>
+                    </ul>
+                </div>
+
+                <!-- Interior Cleaning -->
+                <div class="p-8 border border-gray-200 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">🧹</div>
+                    <h3 class="text-2xl font-semibold mb-4">Interior Cleaning</h3>
+                    <p class="text-gray-600 mb-4">Deep interior cleaning and sanitization. Restores your car's interior to pristine condition.</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Seat cleaning</li>
+                        <li>Carpet shampooing</li>
+                        <li>Dashboard detailing</li>
+                        <li>Sanitization treatment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Service Packages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Package -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-semibold text-center mb-4">Basic Care</h3>
+                    <div class="text-primary text-4xl font-bold text-center mb-4">$99</div>
+                    <ul class="space-y-2 mb-8">
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Exterior Wash</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Interior Vacuum</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Window Cleaning</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Tire Dressing</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-2 rounded-full hover:bg-orange-600 transition duration-300">Choose Plan</button>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 border-2 border-primary">
+                    <h3 class="text-2xl font-semibold text-center mb-4">Premium Care</h3>
+                    <div class="text-primary text-4xl font-bold text-center mb-4">$199</div>
+                    <ul class="space-y-2 mb-8">
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> All Basic Care Features</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Engine Detailing</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Wax Application</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Interior Detailing</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> AC Check-up</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-2 rounded-full hover:bg-orange-600 transition duration-300">Choose Plan</button>
+                </div>
+
+                <!-- Ultimate Package -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-semibold text-center mb-4">Ultimate Care</h3>
+                    <div class="text-primary text-4xl font-bold text-center mb-4">$299</div>
+                    <ul class="space-y-2 mb-8">
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> All Premium Care Features</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Paint Protection</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Ceramic Coating</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Full System Check</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> 1 Year Warranty</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-2 rounded-full hover:bg-orange-600 transition duration-300">Choose Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-primary mb-4">RV Car Care</h3>
+                    <p>Professional auto care services</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="hover:text-primary">Home</a></li>
+                        <li><a href="/services.html" class="hover:text-primary">Services</a></li>
+                        <li><a href="/portfolio.html" class="hover:text-primary">Portfolio</a></li>
+                        <li><a href="/about.html" class="hover:text-primary">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li>Car Washing</li>
+                        <li>Engine Detailing</li>
+                        <li>Oil Change</li>
+                        <li>AC Servicing</li>
+                        <li>Wheel Alignment</li>
+                        <li>Interior Cleaning</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-primary">📱</a>
+                        <a href="#" class="text-2xl hover:text-primary">📸</a>
+                        <a href="#" class="text-2xl hover:text-primary">🐦</a>
+                        <a href="#" class="text-2xl hover:text-primary">👥</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p>&copy; 2024 RV Car Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

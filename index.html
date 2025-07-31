@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RV Car Care - Professional Auto Care Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F97316',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-black py-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-primary">RV Car Care</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="/" class="text-white hover:text-primary">Home</a>
+                <a href="/services.html" class="text-white hover:text-primary">Services</a>
+                <a href="/portfolio.html" class="text-white hover:text-primary">Portfolio</a>
+                <a href="/about.html" class="text-white hover:text-primary">About</a>
+                <a href="/contact.html" class="text-white hover:text-primary">Contact</a>
+            </div>
+            <button class="md:hidden text-white" onclick="toggleMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black absolute w-full">
+            <div class="container mx-auto px-4 py-2 space-y-2">
+                <a href="/" class="block text-white hover:text-primary">Home</a>
+                <a href="/services.html" class="block text-white hover:text-primary">Services</a>
+                <a href="/portfolio.html" class="block text-white hover:text-primary">Portfolio</a>
+                <a href="/about.html" class="block text-white hover:text-primary">About</a>
+                <a href="/contact.html" class="block text-white hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-black text-white">
+        <div class="container mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Premium Car Care Services</h1>
+            <p class="text-xl mb-8">Professional care for your precious vehicle</p>
+            <a href="/contact.html" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-orange-600 transition duration-300">Book Your Service</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">24/7</div>
+                    <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+                    <p class="text-gray-600">Always available for your vehicle needs</p>
+                </div>
+                <div class="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">👨‍🔧</div>
+                    <h3 class="text-xl font-semibold mb-2">Trained Technicians</h3>
+                    <p class="text-gray-600">Expert care from certified professionals</p>
+                </div>
+                <div class="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-semibold mb-2">Affordable Pricing</h3>
+                    <p class="text-gray-600">Quality service at competitive rates</p>
+                </div>
+                <div class="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">🚗</div>
+                    <h3 class="text-xl font-semibold mb-2">Pickup & Drop</h3>
+                    <p class="text-gray-600">Convenient door-to-door service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-primary text-4xl mb-4">🚿</div>
+                    <h3 class="text-xl font-semibold mb-2">Car Washing</h3>
+                    <p class="text-gray-600">Professional cleaning inside and out</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-primary text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-semibold mb-2">Engine Detailing</h3>
+                    <p class="text-gray-600">Thorough engine bay cleaning</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-primary text-4xl mb-4">🛢️</div>
+                    <h3 class="text-xl font-semibold mb-2">Oil Change</h3>
+                    <p class="text-gray-600">Regular maintenance for longevity</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-primary text-4xl mb-4">❄️</div>
+                    <h3 class="text-xl font-semibold mb-2">AC Servicing</h3>
+                    <p class="text-gray-600">Keep your car cool and comfortable</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-primary text-4xl mb-4">⚙️</div>
+                    <h3 class="text-xl font-semibold mb-2">Wheel Alignment</h3>
+                    <p class="text-gray-600">Perfect balance and handling</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-primary text-4xl mb-4">🧹</div>
+                    <h3 class="text-xl font-semibold mb-2">Interior Cleaning</h3>
+                    <p class="text-gray-600">Detailed interior maintenance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why We're the Best Section -->
+    <section class="py-16 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Why We're the Best</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="text-primary text-4xl mb-4">🏆</div>
+                    <h3 class="text-xl font-semibold mb-2">10+ Years Experience</h3>
+                    <p>Trusted by thousands of car owners</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-primary text-4xl mb-4">⭐</div>
+                    <h3 class="text-xl font-semibold mb-2">Premium Equipment</h3>
+                    <p>Using the latest technology</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-primary text-4xl mb-4">💯</div>
+                    <h3 class="text-xl font-semibold mb-2">100% Satisfaction</h3>
+                    <p>Guaranteed quality service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Customer Reviews</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <div class="text-primary text-2xl mb-4">★★★★★</div>
+                    <p class="mb-4">"Best car care service I've ever used. Professional and thorough!"</p>
+                    <p class="font-semibold">- John Smith</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <div class="text-primary text-2xl mb-4">★★★★★</div>
+                    <p class="mb-4">"Excellent service and attention to detail. My car looks brand new!"</p>
+                    <p class="font-semibold">- Sarah Johnson</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <div class="text-primary text-2xl mb-4">★★★★★</div>
+                    <p class="mb-4">"Great value for money. Will definitely come back again!"</p>
+                    <p class="font-semibold">- Mike Davis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="py-16 bg-primary">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-8">Stay Updated</h2>
+            <form class="max-w-md mx-auto" id="subscribe-form">
+                <div class="flex gap-4">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-full" required>
+                    <button type="submit" class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition duration-300">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-primary mb-4">RV Car Care</h3>
+                    <p>Professional auto care services</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="hover:text-primary">Home</a></li>
+                        <li><a href="/services.html" class="hover:text-primary">Services</a></li>
+                        <li><a href="/portfolio.html" class="hover:text-primary">Portfolio</a></li>
+                        <li><a href="/about.html" class="hover:text-primary">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li>Car Washing</li>
+                        <li>Engine Detailing</li>
+                        <li>Oil Change</li>
+                        <li>AC Servicing</li>
+                        <li>Wheel Alignment</li>
+                        <li>Interior Cleaning</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-primary">📱</a>
+                        <a href="#" class="text-2xl hover:text-primary">📸</a>
+                        <a href="#" class="text-2xl hover:text-primary">🐦</a>
+                        <a href="#" class="text-2xl hover:text-primary">👥</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p>&copy; 2024 RV Car Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Subscribe form handling
+        document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
